@@ -20,6 +20,8 @@ Who stole the cookies from the cookie jar? Using classes for `Cookie`, `Jar`, an
 1. A `Cookie` has a `type` attribute, and a way to read that data.
 1. A `Jar` has a `maximum_capacity`, a `current_num_cookies`, and ways to read that data.
 1. A `Person` can `add_cookie` to a `Jar` instance. A `Person` can also `steal_cookie` from the `Jar`.
+1. Write a method that can tell how many `Cookies` a `Person` stole from the `Jar`.
+1. A `Person` should also be able to tell us the `type`s of `Cookies` they ate from the `Jar`. 
 
 - Can you come up with more properties for each class? How does that property interact with the other classes?
 
@@ -43,13 +45,17 @@ You own a line of luxurious ski resorts and hotels. You need to be able to keep 
 Using classes for `Hotel`, `Reservation`, `Room`, and `Guest`, write a TDD solution that encompasses this functionality.
 1. A `Guest` has a `name`, as well as a way to read that data.
 1. A `Room` can accomodate up to 2 `Guests`.
-1. A `Reservation` has at least 1 `Room`. It should also be able able to tell you the name of each `Guest` that is staying in their `Room` currently.
+1. A `Reservation` has at least 1 `Room`. A `Reservation` should also be able able to tell you the name of each `Guest` that is staying in their `Room` currently.
 1. A `Hotel` can has a maximum of 10 `Rooms`. The hotel should be able to list the names of all `Guests` currently staying at the hotel. A hotel should also be able to state the remaining number of guests it can accept reservations from (`maximum_guests - current_guests` e.g. `"This hotel can accomodate 4 more guests."`).
 
 ### Scenario 6: Shopping Cart
 Your local grocery chain has lots of products, lots of shopping carts, and lots of stores in the surrounding area. You've been hired to keep track of each product & shopping cart in each store, and make sure the carts don't get overfilled. Using classes for `Product`, `ShoppingCart`, `Guest`, and `Store`, write a solution using TDD that encompasses this functionality.
 
-- Each `ShoppingCart` has a `capacity` of no more than 5 items.
-- Each `Product` has a name, unit price, and quantity.
-- Each `Store` has a place to store its `ShoppingCart`s and `Product`s.
-- Each `Store` should only allow up to 5 `Guest`s at a time (it's _very_ premium).
+1. Each `Product` has a name, unit price, and quantity.
+1. Each `ShoppingCart` has a `capacity` of no more than 5 `Product`s.
+  - Do you think it is important to be able to tell if a shopping cart is full or empty? How would that be represented?
+  - The `ShoppingCart` should be able to list out the names of each of its products.
+  - The `ShoppingCart` should also be able to calculate the subtotal of all its products.
+1. Each `Store` has a place to store its `ShoppingCart`s and `Product`s.
+1. Each `Store` should only allow up to 5 `Guest`s at a time (it's _very_ premium).
+  - A `Store` needs the ability to bill each `Guest` according to the `Products` in their `ShoppingCart`. What is the sum total of all the `Store`'s `Guests` `ShoppingCart`s?
