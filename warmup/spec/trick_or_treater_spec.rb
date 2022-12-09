@@ -31,7 +31,7 @@ RSpec.describe TrickOrTreater do
 
   xit 'can get candies' do
     trick_or_treater = TrickOrTreater.new(Costume.new('Spaceship Mechanic'))
-    trick_or_treater.bag << Candy.new('Gummy bears')
+    trick_or_treater.bag.add_candy Candy.new('Gummy bears')
 
     expect(trick_or_treater.has_candy?).to be true
   end
