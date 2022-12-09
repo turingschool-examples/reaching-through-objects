@@ -1,5 +1,6 @@
-require './spec/spec_helper'
 require './lib/street'
+require './lib/building'
+require './lib/apartment'
 
 RSpec.describe Street do
   before(:each) do

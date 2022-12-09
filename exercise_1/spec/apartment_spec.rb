@@ -1,5 +1,5 @@
-require './spec/spec_helper'
 require './lib/apartment'
+require './lib/room'
 
 RSpec.describe Apartment do
   let(:apartment) { Apartment.new }
@@ -36,6 +36,7 @@ RSpec.describe Apartment do
     describe "@rooms" do
       it "can have up to 4 Rooms" do
         expect(apartment.instance_variable_get(:@rooms).length).to eq(4)
+        expect(apartment.instance_variable_get(:@rooms)).to all be_a Room
       end
     end
 

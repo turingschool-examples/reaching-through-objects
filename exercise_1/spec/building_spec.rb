@@ -1,5 +1,5 @@
-require './spec/spec_helper'
 require './lib/building'
+require './lib/apartment'
 
 RSpec.describe Building do
   let(:building) { Building.new("623", "Savills Apartment Building") }

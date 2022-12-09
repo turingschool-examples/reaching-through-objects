@@ -1,4 +1,3 @@
-require './spec/spec_helper'
 require './lib/room'
 
 RSpec.describe Room do
